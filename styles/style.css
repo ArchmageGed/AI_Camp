@@ -299,16 +299,25 @@ header {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
-.product-img-placeholder {
+/* Replaced placeholder styles with image wrapper rules */
+.product-image-container {
   height: 220px;
   background-color: var(--color-bg-neutral);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: var(--color-primary-brown);
-  padding: 10px;
-  text-align: center;
+  overflow: hidden; /* Clips image scale on hover */
+  position: relative;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image proportions sharp and uncompressed */
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+/* Visual polish: Subtle zoom effect when the user hovers over a product card */
+.product-card:hover .product-img {
+  transform: scale(1.04);
 }
 
 .product-info {
@@ -385,7 +394,9 @@ header {
 
 /* Contact Form */
 .contact-section {
+  padding-top: 100px; /* Matches the top spacing of your other sections */
   padding-bottom: 96px;
+  scroll-margin-top: 15px; /* Magic bullet: Accounts for your 80px fixed navbar */
 }
 
 .contact-grid {
