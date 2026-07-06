@@ -29,21 +29,21 @@ const translations = {
       "Scalable, drop-in green packaging alternatives optimized for modern e-commerce and logistics setups.",
 
     "p1-img": "Molded Corner Protectors",
-    "p1-title": "Custom Corner Inserts",
+    "p1-title": "Wine Bottle Shippers",
     "p1-desc":
-      "Perfect for electronics, heavy machinery, and cosmetics. Tailored to fit your exact specifications and box sizing requirements.",
+      "Engineered for the safe, shock-proof export of premium and bio-wineries.",
     "p-btn-1": "Inquire Custom Fit",
 
     "p2-img": "Thermal Shippers",
     "p2-title": "Eco Insulated Coolers",
     "p2-desc":
-      "Keep perishable items, pharmaceuticals, or food deliveries perfectly chilled without standard petroleum-based coolers.",
+      "Optimized for agricultural exports (berries, fresh produce) and cold-chain logistics",
     "p-btn-2": "See Spec Sheets",
 
     "p3-img": "Custom Bio-Shapes",
     "p3-title": "Branded Display Trays",
     "p3-desc":
-      "Elevate your brand unboxing experience. Beautifully earthy, rustic texture customized with embossed eco-branding options.",
+      "Velvety, earthy textures designed for luxury cosmetics, candles, and artisan goods.",
     "p-btn-3": "Request Samples",
 
     "form-title": "Join the Green Revolution",
