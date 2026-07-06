@@ -484,12 +484,6 @@ header {
   background-color: var(--color-bg-neutral);
 }
 
-/* --- CONTACT SECTION (SPLIT WITH GRAPHIC MOCK) --- */
-.contact-section {
-  padding-top: 100px;
-  padding-bottom: 96px;
-  scroll-margin-top: 80px;
-  
 .contact-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -588,12 +582,36 @@ header {
   align-items: center;
 }
 
+/* 1. THE FRAME: This creates the dashed blob shape */
+.contact-stamp-container {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1;
+  border-radius: 50% 20% 50% 50%;
+  border: 4px dashed var(--color-primary-green);
+  background: var(--color-bg-neutral);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* --- MOVE THE WHOLE SECTION HERE --- */
+  margin-top: 70px; /* Pushes it downward away from the text */
+  margin-left: auto; /* Combines with margin-right to center it */
+  margin-right: auto;
+}
+
+/* 2. THE IMAGE: This zooms independently inside the frame */
 .contact-stamp-img {
-  max-width: 160px;
-  height: auto;
-  opacity: 0.9;
-  /* Removes the baked-in white square from your logo asset dynamically */
-  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+
+  /* This forces the image to stretch and fill the space */
+  object-fit: cover;
+
+  /* Adjust this scale value up or down to get the perfect zoom */
+  transform: scale(1.25) translateY(-8px);
 }
 
 /* --- SCROLLING FORM UI PANELS --- */
