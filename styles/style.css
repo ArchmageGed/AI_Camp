@@ -162,23 +162,23 @@ header {
   border-color: var(--color-primary-green);
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION (CLEAN GRID) --- */
 .hero {
-  padding: 180px 0 100px 0;
-  background: linear-gradient(
-    135deg,
-    var(--color-bg-light) 60%,
-    var(--color-bg-neutral)
+  padding: 140px 0 80px 0;
+  background: radial-gradient(
+    circle at top right,
+    var(--color-bg-neutral) 100%,
+    var(--color-bg-light) 0%
   );
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -187,45 +187,80 @@ header {
   line-height: 1.2;
   color: var(--color-primary-brown);
   margin-bottom: 20px;
+  letter-spacing: -0.01em;
 }
 
 .hero-content p {
   font-size: 18px;
-  margin-bottom: 30px;
-  color: #555;
+  margin-bottom: 32px;
+  color: var(--color-primary-brown);
+  line-height: 1.6;
 }
 
 .hero-cta {
   display: flex;
-  gap: 15px;
+  gap: 16px;
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 460px;
-  height: 460px;
-
-  background: var(--color-bg-neutral);
-  border: 4px dashed var(--color-primary-green);
-  border-radius: 50% 20% 50% 50%;
-
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.logo-graphic-mock {
+/* Unified video display window matching text column scale */
+.hero-video-container {
+  position: relative;
   width: 100%;
-  height: 110%;
-  object-fit: cover;
-  transform: scale(1.2) translateY(-20px);
+  height: 440px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(62, 48, 35, 0.08);
+  border: 1px solid rgba(229, 223, 215, 0.9);
+  transition: var(--transition-smooth);
+}
 
-  border: none;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
+.hero-video-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(83, 110, 77, 0.12);
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(251, 249, 246, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--color-primary-green);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(83, 110, 77, 0.15);
+}
+
+/* Mobile responsive viewports */
+@media (max-width: 968px) {
+  .hero {
+    padding-top: 110px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .hero-cta {
+    justify-content: center;
+  }
+  .hero-video-container {
+    order: -1;
+    height: 300px;
+  }
 }
 
 /* --- DUAL VIDEO SHOWCASE THEATER --- */
@@ -400,25 +435,25 @@ header {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Replaced placeholder styles with image wrapper rules */
+/* Image framing container */
 .product-image-container {
-  height: 220px;
+  height: 240px; /* Matches the exact aspect ratio hierarchy of your original blocks */
   background-color: var(--color-bg-neutral);
-  overflow: hidden; /* Clips image scale on hover */
+  overflow: hidden;
   position: relative;
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Keeps image proportions sharp and uncompressed */
+  object-fit: cover; /* Preserves organic details without distortion */
   display: block;
   transition: var(--transition-smooth);
 }
 
-/* Visual polish: Subtle zoom effect when the user hovers over a product card */
+/* Premium micro-interaction: Subtle zoom on hover */
 .product-card:hover .product-img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .product-info {
@@ -435,6 +470,7 @@ header {
   color: #666;
   margin-bottom: 20px;
   font-size: 15px;
+  min-height: 72px; /* Keeps your text columns perfectly aligned even if descriptions vary in length */
 }
 
 .product-btn {
@@ -448,6 +484,12 @@ header {
   background-color: var(--color-bg-neutral);
 }
 
+/* --- CONTACT SECTION (SPLIT WITH GRAPHIC MOCK) --- */
+.contact-section {
+  padding-top: 100px;
+  padding-bottom: 96px;
+  scroll-margin-top: 80px;
+  
 .contact-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -493,11 +535,11 @@ header {
   width: 100%;
 }
 
-/* Contact Form */
+/* --- CONTACT SECTION (SPLIT SIDE-BY-SIDE) --- */
 .contact-section {
-  padding-top: 100px; /* Matches the top spacing of your other sections */
+  padding-top: 100px;
   padding-bottom: 96px;
-  scroll-margin-top: 15px; /* Magic bullet: Accounts for your 80px fixed navbar */
+  background-color: var(--color-bg-neutral);
 }
 
 .contact-grid {
@@ -507,11 +549,54 @@ header {
   gap: 46px;
 }
 
+/* Keeps the left side content fixed while form scrolls on right */
 .contact-content {
   position: sticky;
-  top: 110px;
+  top: 120px;
 }
 
+/* Standardized Typography Hierarchy */
+.contact-eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-primary-green);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.contact-content h2 {
+  font-size: 36px;
+  color: var(--color-primary-brown);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.contact-content p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Logo placement container on the left column */
+.contact-left-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-stamp-img {
+  max-width: 160px;
+  height: auto;
+  opacity: 0.9;
+  /* Removes the baked-in white square from your logo asset dynamically */
+  mix-blend-mode: multiply;
+}
+
+/* --- SCROLLING FORM UI PANELS --- */
 .inquiry-form {
   width: 100%;
   padding: 34px;
@@ -520,6 +605,22 @@ header {
   border-radius: 22px;
   box-shadow: 0 24px 70px rgba(62, 48, 35, 0.12);
   backdrop-filter: blur(14px);
+}
+
+/* Mobile breakpoint fallback layout logic */
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact-content {
+    position: static;
+    text-align: center;
+  }
+  .contact-left-logo {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 .form-group {
