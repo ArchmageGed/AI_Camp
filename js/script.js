@@ -10,6 +10,11 @@ const translations = {
     "hero-btn-primary": "Switch to Bio-Packaging",
     "hero-btn-secondary": "Explore The Tech",
 
+    "showcase-eyebrow": "SOKOPACK IN ACTION",
+    "showcase-title": "Engineered by Nature. Proven by Science.",
+    "theater-1-title": "Industrial-Grade Protection",
+    "theater-2-title": "100% Sustainable Design",
+
     "about-title": "Nature's Smartest Packaging",
     "about-desc":
       "We bind agricultural clean byproducts together using natural mushroom roots using mycelium to form custom protective shapes. Zero toxins, zero plastic footprint.",
@@ -90,6 +95,11 @@ const translations = {
       "ჩაანაცვლეთ პლასტმასი და პენოპლასტი SOKOPACK-ით. ჩვენი სოკოს მიცელიუმისგან დამზადებული ბიო-შეფუთვა უზრუნველყოფს საიმედო დაცვას და 45 დღეში სრულად იშლება ნიადაგში.",
     "hero-btn-primary": "გადადი ბიო-შეფუთვაზე",
     "hero-btn-secondary": "გაეცანი ტექნოლოგიას",
+
+    "showcase-eyebrow": "SOKOPACK მოქმედებაში",
+    "showcase-title": "შექმნილია ბუნების მიერ. დამტკიცებულია მეცნიერებით.",
+    "theater-1-title": "ინდუსტრიული კლასის დაცვა",
+    "theater-2-title": "100%-ით მდგრადი დიზაინი",
 
     "about-title": "ბუნების ყველაზე ჭკვიანი შეფუთვა",
     "about-desc":
